@@ -7,7 +7,7 @@
         public double FoodRating { get; set; }
         public int FoodVotesQuantity { get; set; }
         public string ClientChoice { get; set; }
-        public string Restaurant_Choice { get; set; }
+        public string RestaurantChoice { get; set; }
 
         public RestaurantEntity Restaurant { get; set; }
     }

@@ -5,5 +5,6 @@ namespace CoffeeCheck.Application.CQRS.Commands.Rating
 {
     public class UpdateOverallRatingQuery : IRequest<OverallRatingModel>
     {
+        public Guid RestaurantId { get; init; }
     }
 }

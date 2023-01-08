@@ -17,6 +17,7 @@ namespace CoffeeCheck.Application
         private IFoodRatingRepository _food;
         private ICoffeeRatingRepository _coffee;
         private ICandyRatingRepository _candy;
+        private IOverallRatingRepository _overall;
         private IMapper _mapper;
 
         public UoW(
@@ -78,6 +79,19 @@ namespace CoffeeCheck.Application
                 }
 
                 return _candy;
+            }
+        }
+
+        public IOverallRatingRepository Overall
+        {
+            get
+            {
+                if (_overall is null)
+                {
+                    _overall = new OverallRatingRepository(_context, _mapper);
+                }
+
+                return _overall;
             }
         }
 

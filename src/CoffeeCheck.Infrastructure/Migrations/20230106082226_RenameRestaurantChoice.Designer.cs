@@ -3,6 +3,7 @@ using System;
 using CoffeeCheck.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CoffeeCheck.Infrastructure.Migrations
 {
     [DbContext(typeof(CoffeeCheckContext))]
-    partial class CoffeeCheckContextModelSnapshot : ModelSnapshot
+    [Migration("20230106082226_RenameRestaurantChoice")]
+    partial class RenameRestaurantChoice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

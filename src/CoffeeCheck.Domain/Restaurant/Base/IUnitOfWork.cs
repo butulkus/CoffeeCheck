@@ -8,6 +8,7 @@ namespace CoffeeCheck.Domain.Restaurant.Base
         IFoodRatingRepository Food { get; }
         ICoffeeRatingRepository Coffee { get; }
         ICandyRatingRepository Candy { get; }
+        IOverallRatingRepository Overall { get; }
         Task<int> SaveChangesAsync();
     }
 }
